@@ -1,0 +1,6 @@
+student_id,major,GPA,is_cs_major,credits_taken
+1001,Computer Science,3.0,True,15.0
+1002,Statistics,3.7,False,12.5
+1003,Economics,4.0,False,18.0
+1004,Math,2.9,True,10.5
+1005,Data Science,3.0,True,14.0
