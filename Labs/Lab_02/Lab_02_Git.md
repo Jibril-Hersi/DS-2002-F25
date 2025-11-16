@@ -98,7 +98,9 @@ You can use GitHub to showcase your own work, interests, and projects.
     
 7. `git add` your file(s), then commit them, and push them back to **your fork** in GitHub.
 8. From your forked repo in the GitHub website, submit a Pull Request for your changes to be incorporated back upstream into the original repository. You can submit a PR by clicking on the "Contribute" drop-down and selecting "Open Pull Request". That will open up a form which you will submit to trigger the PR. Give your PR an informative title then submit.
-9. Wait for a notification email that your Pull Request has been accepted. Merged Pull Requests will display your name and a link to your profile on the home page of the main repository.
+9. Add the URL to your PR to the GitHub Gist.
+
+You will get a notification email that your Pull Request has been accepted. Merged Pull Requests will display your name and a link to your profile on the home page of the main repository.
 
 ## BONUS: Create a GitHub Pages website
 

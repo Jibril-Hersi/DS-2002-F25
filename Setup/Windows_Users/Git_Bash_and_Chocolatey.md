@@ -1,19 +1,4 @@
-# Welcome to DS-2002 Windows User Setup Guide!
-
-If you are a Windows User, you are in the right place! If you are a MacOS user, please click [here](https://github.com/austin-t-rivera/DS-2002-F25/blob/main/Setup/macOS_Users.md) to follow the MacOS User Setup Guide.
-
-In this Setup Guide, you will find easy to navigate instructions for downloading and installing the tools you will need this semester:
-- Environments ⛰️
-- Languages 🗣️
-- Packages 📦
-- Tools 🛠️
-- Etc. 🤷‍♀️
-
-<br>
-
-# Early Semester Must Haves
-
-### Git Bash 💻
+# Git Bash 💻
 Git Bash is a command-line interface (CLI) for Windows that emulates a Unix-like shell environment. It provides essential Unix commands like `ls`, `cd`, `grep`, and a robust environment for using Git. Git Bash is important because it allows Windows users to work with the same commands and workflows as developers on macOS and Linux, which is crucial for consistency in software development and data science.
 
 Please follow these steps and read each step carefully:
@@ -26,7 +11,9 @@ Please follow these steps and read each step carefully:
 
 <br>
 
-### Chocolatey 🍫
+---
+
+# Chocolatey 🍫
 **Chocolatey** is a package manager for Windows. Think of it as an "app store" for the command line. It's important because it automates the process of installing, updating, and removing software from the command line. Instead of manually downloading an installer, you can use a single command like `choco install make` to automatically download and set up a program. This saves time and ensures your tools are consistently managed.
 
 Please follow these steps and read each step carefully:
