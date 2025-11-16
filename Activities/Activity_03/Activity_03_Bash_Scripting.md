@@ -42,7 +42,8 @@ brew install make
 5. In your web browser, pull up YOUR FORK of the class repository DS-2002-F25.
 6. Click "Code", Select "SSH", Click "Copy url to clipboard"
 7. Back in your terminal, type `git clone ` on your command line, paste the URL from GitHub, and hit Enter.
-8. Run the following to ensure your repository is up-to-date:
+8. `cd` into your newly cloned DS-2002-F25 repository.
+9. Run the following to ensure your repository is up-to-date:
 ```
 git remote add upstream git@github.com:austin-t-rivera/DS-2002-F25.git
 ```
