@@ -1,24 +1,34 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
-# Usage: ./upload_and_presign.sh <local-file> <bucket-name> <expires-in-seconds>
+# Usage:
+#   ./upload_and_presign.sh <local_file> <bucket_name> <expires_in_seconds>
+#
+# Example:
+#   ./upload_and_presign.sh local_test.jpg ds2002-f25-zjq6eh 60
 
-if [ $# -lt 3 ]; then
-  echo "Usage: $0 <local-file> <bucket-name> <expires-in-seconds>"
+if [ "$#" -ne 3 ]; then
+  echo "Usage: $0 <local_file> <bucket_name> <expires_in_seconds>"
   exit 1
 fi
 
-FILE="$1"
-BUCKET="$2"
-EXPIRY="$3"
+LOCAL_FILE="$1"
+BUCKET_NAME="$2"
+EXPIRES_IN="$3"
 
-echo "Uploading $FILE to s3://$BUCKET/ ..."
-aws s3 cp "$FILE" "s3://$BUCKET/"
-
-if [ $? -ne 0 ]; then
-  echo "Upload failed."
+if [ ! -f "$LOCAL_FILE" ]; then
+  echo "Error: file '$LOCAL_FILE' not found"
   exit 1
 fi
+
+echo "Uploading $LOCAL_FILE to s3://$BUCKET_NAME/ ..."
+aws s3 cp "$LOCAL_FILE" "s3://$BUCKET_NAME/"
+
+if [ "$?" -ne 0 ]; then
+  echo "Upload failed"
+  exit 1
+fi
+
+OBJECT_KEY="$(basename "$LOCAL_FILE")"
 
 echo "Generating presigned URL..."
-aws s3 presign "s3://$BUCKET/$(basename "$FILE")" --expires-in "$EXPIRY"
-
+aws s3 presign --expires-in "$EXPIRES_IN" "s3://$BUCKET_NAME/$OBJECT_KEY"
